@@ -57,8 +57,41 @@ namespace Original{
     }
 }
 
+namespace Original{
+    class Power{
+        public:
+            Power( int r ) : nums_(Power::CreatePowerSequence(r)){}
+            ~Power() = default;
+
+            int At( int n ){
+                if( n < 0 || n >= static_cast<int>(nums_.size()) ) return -1;
+            return nums_[n];
+            }
+        public:
+            static std::vector<int> CreatePowerSequence( int r ){
+                std::vector<int> nums;
+                int tmp = 1;
+                for( int i = 0; i <= r; i++ ){
+                    nums.push_back( tmp );
+                    tmp *= r;
+                }
+            return nums;
+            }
+        private:
+            std::vector<int> nums_;
+    };
+}
+
 
 int main( int argc, char** argv ){
-    
+    int a1, n, r;
+    cin >> a1 >> n >> r;
+
+    Original::Power power( r );
+    for( int i = 0; i < n; i++ ){
+        cout << a1 * power.At( i ) << flush;
+        if( i != n - 1 ) cout << " " << flush;
+    }
+    cout << endl;
 return 0;
 }
