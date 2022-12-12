@@ -10,9 +10,9 @@ This is a sample so that I can commit this to the GitHub.
 ## 2. Conditions
 
 ```
-1≦a{1}≦10
+1≦a{1}≦6
 1≦n≦20
-0≦r≦10
+0≦r≦6
 ```
 
 ## 3. Inputs and Outputs
