@@ -1,4 +1,4 @@
-# one_commits__Samples__arithmetic_pregression
+# one_commits__Samples__geometric_pregression
 
 This is a sample so that I can commit this to the GitHub.
 
